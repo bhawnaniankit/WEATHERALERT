@@ -20,7 +20,7 @@ canvas.config(highlightthickness=0,width=340,height=600)
 
 weather=rain.weathe_city(CITY)
 id=weather[1]["weather"][0]["id"]
-# id=801
+# id=300
 background=None
 text_color="white"
 
@@ -55,12 +55,11 @@ ss_hr=sunset.hour if sunset.hour>9 else f"0{sunset.hour}"
 ss_min=sunset.minute if sunset.minute>9 else f"0{sunset.minute}"
 canvas.create_text(60,390,text=f"Sunset: {ss_hr}:{ss_min}",fill=text_color,font=('Helvetica',12,"bold" ))
 
-
-canvas.create_text()
+# canvas.create_text()
 canvas.pack()
 
-if weather[0]:
-    mail.alert_email("bhawnaniankit@gmail.com")
+if weather[0] or True:
+    mail.alert_email("sreyashsanki@gmail.com")
     messagebox.showinfo("Weather Alert","WEATHER ALERT\nSuggested to carry an umbrella")
     
 window.mainloop()
