@@ -13,7 +13,6 @@ def check_for_weather(lat:str,lon:str):
     }
     response=requests.get(url=WEATHER_API_ENDPOINT,params=params)
     weather_id=response.json()["weather"][0]["id"]
-    # print(response.text)
     if (weather_id<623):
         return [True,response.json()]
     else:
@@ -27,7 +26,6 @@ def lat_lon(city:str,country_code="IN"):
         
     }
     respose=requests.get(url=LAT_LON_API_ENDPOINT,params=params)
-    # print(respose.text)
     return (str(respose.json()[0]["lat"]),str(respose.json()[0]["lon"]))
     
 def weathe_city(city:str,country="IN"):

@@ -32,10 +32,9 @@ elif(id==800):
     background=PhotoImage(file="./img/sunny.png")
     text_color="black"
     
-elif 800<id<805:
+elif 800<id<805 or 700<id<800:
     background=PhotoImage(file="./img/clouds.png")
     text_color="white"
-    
 
 canvas.create_image(170,300,image=background)
 city=canvas.create_text(170,110,text=f"{CITY}  ",fill=text_color,font=('Helvetica',12,"normal" ))

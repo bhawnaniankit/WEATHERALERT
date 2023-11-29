@@ -11,3 +11,4 @@ def alert_email(email:str):
         
 if __name__=="__main__":
     alert_email("bhawnaniankit@gmail.com")
+    
