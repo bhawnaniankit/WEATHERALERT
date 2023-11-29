@@ -13,11 +13,11 @@ def check_for_weather(lat:str,lon:str):
     }
     response=requests.get(url=WEATHER_API_ENDPOINT,params=params)
     weather_id=response.json()["weather"][0]["id"]
-    print(response.text)
+    # print(response.text)
     if (weather_id<623):
-        return True
+        return [True,response.json()]
     else:
-        return False
+        return [False,response.json()]
     
 def lat_lon(city:str,country_code="IN"):
     dotenv.load_dotenv("./.env")
@@ -35,4 +35,5 @@ def weathe_city(city:str,country="IN"):
     return(check_for_weather(loc[0],loc[1]))
     
 if __name__=="__main__":
-    print(weathe_city("Chennai"))
+    temp=weathe_city("Chennai")
+    print(temp)
