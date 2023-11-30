@@ -4,6 +4,7 @@ import dotenv
 
 WEATHER_API_ENDPOINT="https://api.openweathermap.org/data/2.5/weather"
 LAT_LON_API_ENDPOINT="http://api.openweathermap.org/geo/1.0/direct"
+
 def check_for_weather(lat:str,lon:str):
     dotenv.load_dotenv("./.env")
     params={

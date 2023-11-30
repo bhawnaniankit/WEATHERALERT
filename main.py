@@ -20,7 +20,7 @@ canvas.config(highlightthickness=0,width=340,height=600)
 
 weather=rain.weathe_city(CITY)
 id=weather[1]["weather"][0]["id"]
-# id=800
+# id=802
 background=None
 text_color="white"
 
@@ -63,7 +63,7 @@ canvas.create_line(15, 560, 325, 560, width=1,fill=text_color)
 canvas.pack()
 
 if weather[0]:
-    mail.alert_email("sreyashsanki@gmail.com")
+    mail.alert_email("rudraraj.krishna@gmail.com")
     messagebox.showinfo("Weather Alert","WEATHER ALERT\nSuggested to carry an umbrella")
     
 window.mainloop()
